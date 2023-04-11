@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Tests for {@link HelloWorldController}. Modify the tests in order to support your use case as you build your project.
  */
 @DisplayName("Tests for HelloWorldController")
-class HelloWorldControllerTest {
+class  HelloWorldControllerTest {
 
     private static final String EXPECTED_RESPONSE_VALUE = "Hello AWS CodeStar!";
     private static final String INPUT_NAME = "AWS CodeStar";
