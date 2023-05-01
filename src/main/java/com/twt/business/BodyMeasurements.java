@@ -1,14 +1,49 @@
 package com.twt.business;
 
+import java.util.UUID;
+
 public class BodyMeasurements {
     private int weight;
     private int bodyFatPercentage;
     private int bodyFatMass;
 
+    private UUID id;
+
+
+
+
+    public BodyMeasurements(int weight, int bodyFatPercentage, int bodyFatMass, int leanBodyMass, double waistCircumference, double neckCircumference, double hipCircumference, double forearmCircumference, double thighCircumference, double bicepCircumference, double calfCircumference, double chestCircumference) {
+        this.weight = weight;
+        this.bodyFatPercentage = bodyFatPercentage;
+        this.bodyFatMass = bodyFatMass;
+        this.leanBodyMass = leanBodyMass;
+        this.waistCircumference = waistCircumference;
+        this.neckCircumference = neckCircumference;
+        this.hipCircumference = hipCircumference;
+        this.forearmCircumference = forearmCircumference;
+        this.thighCircumference = thighCircumference;
+        this.bicepCircumference = bicepCircumference;
+        this.calfCircumference = calfCircumference;
+        this.chestCircumference = chestCircumference;
+    }
+
+
+    public BodyMeasurements(){
+        this.setId(UUID.randomUUID());
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+
     public int getWeight() {
         return weight;
     }
-
 
     public void setWeight(int weight) {
         this.weight = weight;
@@ -112,20 +147,6 @@ public class BodyMeasurements {
     private double calfCircumference;
     private double chestCircumference;
 
-    public BodyMeasurements(int weight, int bodyFatPercentage, int bodyFatMass, int leanBodyMass, double waistCircumference, double neckCircumference, double hipCircumference, double forearmCircumference, double thighCircumference, double bicepCircumference, double calfCircumference, double chestCircumference) {
-        this.weight = weight;
-        this.bodyFatPercentage = bodyFatPercentage;
-        this.bodyFatMass = bodyFatMass;
-        this.leanBodyMass = leanBodyMass;
-        this.waistCircumference = waistCircumference;
-        this.neckCircumference = neckCircumference;
-        this.hipCircumference = hipCircumference;
-        this.forearmCircumference = forearmCircumference;
-        this.thighCircumference = thighCircumference;
-        this.bicepCircumference = bicepCircumference;
-        this.calfCircumference = calfCircumference;
-        this.chestCircumference = chestCircumference;
-    }
 
 
 }
