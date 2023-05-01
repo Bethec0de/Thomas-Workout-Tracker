@@ -6,25 +6,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by TWT on 2/23/2017.
  */
-public class BodyParts {
+public class BodyPartService {
 
-    public static ArrayList<String> parts = new ArrayList<>();
+
+    //FIXME: This class should be a singleton
+
+
+
+    public ArrayList<BodyPart> parts = new ArrayList<>();
     public static final String url = "jdbc:postgresql://localhost:5432/twt";
     public static final String user = "postgres";
     public static final String password = "bak!VQM2utj2cdg7ckv";
     
-    public BodyParts(){
+    public BodyPartService(){
 
     try (Connection con = DriverManager.getConnection(url, user, password);
     Statement st = con.createStatement();
     ResultSet rs = st.executeQuery("SELECT * FROM twt_objects.bodypart")) {
 
         while (rs.next()) {
-            parts.add(rs.getString("name"));
+            parts.add(new BodyPart(rs.getString("name"), rs.getObject("id", UUID.class)));
         }
 
     } catch (SQLException ex) {
