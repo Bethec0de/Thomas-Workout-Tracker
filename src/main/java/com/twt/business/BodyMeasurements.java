@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class BodyMeasurements {
-    private int currentWeight;
-    private int goalWeight;
+    private int weight;
 
-    private int currentBodyFatPercentage;
-    private int goalBodyFatPercentage;
+    private int bodyFatPercentage;
 
     private UUID id;
 
@@ -20,10 +18,8 @@ public class BodyMeasurements {
 
 
     public BodyMeasurements(int weight, int bodyFatPercentage, int bodyFatMass, int leanBodyMass, int goalWeight, int goalBodyFatPercentage) {
-        this.currentWeight = weight;
-        this.currentBodyFatPercentage = bodyFatPercentage;
-        this.goalWeight = goalWeight;
-        this.goalBodyFatPercentage = goalBodyFatPercentage;
+        this.weight = weight;
+        this.bodyFatPercentage = bodyFatPercentage;
         this.currentBodyParts = new ArrayList<BodyPart>();
         this.goalBodyParts = new ArrayList<BodyPart>();
     }
@@ -43,37 +39,22 @@ public class BodyMeasurements {
     }
 
 
-    public int getCurrentWeight() {
-        return currentWeight;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setCurrentWeight(int currentWeight) {
-        this.currentWeight = currentWeight;
+    public void setWeight(int currentWeight) {
+        this.weight = currentWeight;
     }
 
-    public int getCurrentBodyFatPercentage() {
-        return currentBodyFatPercentage;
+    public int getBodyFatPercentage() {
+        return bodyFatPercentage;
     }
 
-    public void setCurrentBodyFatPercentage(int currentBodyFatPercentage) {
-        this.currentBodyFatPercentage = currentBodyFatPercentage;
+    public void setBodyFatPercentage(int bodyFatPercentage) {
+        this.bodyFatPercentage = bodyFatPercentage;
     }
 
-    public int getGoalWeight() {
-        return goalWeight;
-    }
-
-    public void setGoalWeight(int goalWeight) {
-        this.goalWeight = goalWeight;
-    }
-
-    public int getGoalBodyFatPercentage() {
-        return goalBodyFatPercentage;
-    }
-
-    public void setGoalBodyFatPercentage(int goalBodyFatPercentage) {
-        this.goalBodyFatPercentage = goalBodyFatPercentage;
-    }
 
     public ArrayList<BodyPart> getCurrentBodyParts() {
         return currentBodyParts;
