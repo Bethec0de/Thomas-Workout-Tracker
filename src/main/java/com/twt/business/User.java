@@ -2,7 +2,7 @@ package com.twt.business;
 
 import java.util.UUID;
 
-public class Exerciser {
+public class User {
     private UUID id;
     private String name;
     private int height;
@@ -13,7 +13,7 @@ public class Exerciser {
         return id;
     }
 
-    public Exerciser(UUID id, String name, int height, int age, Gender sex, BodyMeasurements currentBodyMeasurements, BodyMeasurements goalBodyMeasurements) {
+    public User(UUID id, String name, int height, int age, Gender sex, BodyMeasurements currentBodyMeasurements, BodyMeasurements goalBodyMeasurements) {
         this.id = id;
         this.name = name;
         this.height = height;
@@ -21,6 +21,12 @@ public class Exerciser {
         this.sex = sex;
         this.currentBodyMeasurements = currentBodyMeasurements;
         this.goalBodyMeasurements = goalBodyMeasurements;
+    }
+
+    public User() {
+        this.id = UUID.randomUUID();
+        this.currentBodyMeasurements = new BodyMeasurements();
+        this.goalBodyMeasurements = new BodyMeasurements();
     }
 
     public void setId(UUID id) {
