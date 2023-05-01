@@ -18,24 +18,48 @@ public class BodyPartService {
 
 
 
-    public ArrayList<BodyPart> parts = new ArrayList<>();
+    public ArrayList<BodyPart> workoutParts = new ArrayList<>();
+    public ArrayList<BodyPart> measurementparts = new ArrayList<>();
+
     public static final String url = "jdbc:postgresql://localhost:5432/twt";
     public static final String user = "postgres";
     public static final String password = "bak!VQM2utj2cdg7ckv";
     
     public BodyPartService(){
-
-    try (Connection con = DriverManager.getConnection(url, user, password);
-    Statement st = con.createStatement();
-    ResultSet rs = st.executeQuery("SELECT * FROM twt_objects.bodypart")) {
-
-        while (rs.next()) {
-            parts.add(new BodyPart(rs.getString("name"), rs.getObject("id", UUID.class)));
-        }
-
-    } catch (SQLException ex) {
-        System.err.println(ex.getMessage());
+        getWorkoutBodyParts();
+        getMeasurementBodyParts();
     }
-}
+
+
+    public void getWorkoutBodyParts(){
+        try (
+            Connection con = DriverManager.getConnection(url, user, password);
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM twt_objects.bodypart WHERE ForMeasurement = false")) {
+
+            while (rs.next()) {
+                workoutParts.add(new BodyPart(rs.getString("name"), rs.getObject("id", UUID.class)));
+            }
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        };
+    }
+
+    public void getMeasurementBodyParts(){
+        try (
+            Connection con = DriverManager.getConnection(url, user, password);
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM twt_objects.bodypart WHERE ForMeasurement = true")) {
+
+            while (rs.next()) {
+                measurementparts.add(new BodyPart(rs.getString("name"), rs.getObject("id", UUID.class)));
+            }
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        };
+    }
 
 }
+
