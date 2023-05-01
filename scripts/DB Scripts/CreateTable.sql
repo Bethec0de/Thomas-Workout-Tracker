@@ -37,5 +37,35 @@ VALUES ('Wrist', Now(), 'JT');
 INSERT INTO twt_objects.bodypart(
     name, createdate, createdby, formeasurement)
 VALUES ('Waist', Now(), 'JT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Chest', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Bust', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Hips', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Neck', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Left Thigh', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Right Thigh', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Left Calf', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Right Calf', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Left Bicep', Now(), 'GT', true);
+INSERT INTO twt_objects.bodypart(
+    name, createdate, createdby, formeasurement)
+VALUES ('Right Bicep', Now(), 'GT', true);
 
 SELECT * FROM twt_objects.bodypart;
