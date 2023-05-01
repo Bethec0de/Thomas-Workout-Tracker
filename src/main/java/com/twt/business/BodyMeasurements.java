@@ -1,35 +1,37 @@
 package com.twt.business;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class BodyMeasurements {
-    private int weight;
-    private int bodyFatPercentage;
-    private int bodyFatMass;
+    private int currentWeight;
+    private int goalWeight;
+
+    private int currentBodyFatPercentage;
+    private int goalBodyFatPercentage;
 
     private UUID id;
 
+    private ArrayList<BodyPart> currentBodyParts;
+    private ArrayList<BodyPart> goalBodyParts;
 
 
 
-    public BodyMeasurements(int weight, int bodyFatPercentage, int bodyFatMass, int leanBodyMass, double waistCircumference, double neckCircumference, double hipCircumference, double forearmCircumference, double thighCircumference, double bicepCircumference, double calfCircumference, double chestCircumference) {
-        this.weight = weight;
-        this.bodyFatPercentage = bodyFatPercentage;
-        this.bodyFatMass = bodyFatMass;
-        this.leanBodyMass = leanBodyMass;
-        this.waistCircumference = waistCircumference;
-        this.neckCircumference = neckCircumference;
-        this.hipCircumference = hipCircumference;
-        this.forearmCircumference = forearmCircumference;
-        this.thighCircumference = thighCircumference;
-        this.bicepCircumference = bicepCircumference;
-        this.calfCircumference = calfCircumference;
-        this.chestCircumference = chestCircumference;
+
+
+    public BodyMeasurements(int weight, int bodyFatPercentage, int bodyFatMass, int leanBodyMass, int goalWeight, int goalBodyFatPercentage) {
+        this.currentWeight = weight;
+        this.currentBodyFatPercentage = bodyFatPercentage;
+        this.goalWeight = goalWeight;
+        this.goalBodyFatPercentage = goalBodyFatPercentage;
+        this.currentBodyParts = new ArrayList<BodyPart>();
+        this.goalBodyParts = new ArrayList<BodyPart>();
     }
-
 
     public BodyMeasurements(){
         this.setId(UUID.randomUUID());
+        this.currentBodyParts = new ArrayList<BodyPart>();
+        this.goalBodyParts = new ArrayList<BodyPart>();
     }
 
     public UUID getId() {
@@ -41,112 +43,52 @@ public class BodyMeasurements {
     }
 
 
-    public int getWeight() {
-        return weight;
+    public int getCurrentWeight() {
+        return currentWeight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setCurrentWeight(int currentWeight) {
+        this.currentWeight = currentWeight;
     }
 
-    public int getBodyFatPercentage() {
-        return bodyFatPercentage;
+    public int getCurrentBodyFatPercentage() {
+        return currentBodyFatPercentage;
     }
 
-    public void setBodyFatPercentage(int bodyFatPercentage) {
-        this.bodyFatPercentage = bodyFatPercentage;
+    public void setCurrentBodyFatPercentage(int currentBodyFatPercentage) {
+        this.currentBodyFatPercentage = currentBodyFatPercentage;
     }
 
-    public int getBodyFatMass() {
-        return bodyFatMass;
+    public int getGoalWeight() {
+        return goalWeight;
     }
 
-    public void setBodyFatMass(int bodyFatMass) {
-        this.bodyFatMass = bodyFatMass;
+    public void setGoalWeight(int goalWeight) {
+        this.goalWeight = goalWeight;
     }
 
-    public int getLeanBodyMass() {
-        return leanBodyMass;
+    public int getGoalBodyFatPercentage() {
+        return goalBodyFatPercentage;
     }
 
-    public void setLeanBodyMass(int leanBodyMass) {
-        this.leanBodyMass = leanBodyMass;
+    public void setGoalBodyFatPercentage(int goalBodyFatPercentage) {
+        this.goalBodyFatPercentage = goalBodyFatPercentage;
     }
 
-    public double getWaistCircumference() {
-        return waistCircumference;
+    public ArrayList<BodyPart> getCurrentBodyParts() {
+        return currentBodyParts;
     }
 
-    public void setWaistCircumference(double waistCircumference) {
-        this.waistCircumference = waistCircumference;
+    public void setCurrentBodyParts(ArrayList<BodyPart> currentBodyParts) {
+        this.currentBodyParts = currentBodyParts;
     }
 
-    public double getNeckCircumference() {
-        return neckCircumference;
+    public ArrayList<BodyPart> getGoalBodyParts() {
+        return goalBodyParts;
     }
 
-    public void setNeckCircumference(double neckCircumference) {
-        this.neckCircumference = neckCircumference;
+    public void setGoalBodyParts(ArrayList<BodyPart> goalBodyParts) {
+        this.goalBodyParts = goalBodyParts;
     }
-
-    public double getHipCircumference() {
-        return hipCircumference;
-    }
-
-    public void setHipCircumference(double hipCircumference) {
-        this.hipCircumference = hipCircumference;
-    }
-
-    public double getForearmCircumference() {
-        return forearmCircumference;
-    }
-
-    public void setForearmCircumference(double forearmCircumference) {
-        this.forearmCircumference = forearmCircumference;
-    }
-
-    public double getThighCircumference() {
-        return thighCircumference;
-    }
-
-    public void setThighCircumference(double thighCircumference) {
-        this.thighCircumference = thighCircumference;
-    }
-
-    public double getBicepCircumference() {
-        return bicepCircumference;
-    }
-
-    public void setBicepCircumference(double bicepCircumference) {
-        this.bicepCircumference = bicepCircumference;
-    }
-
-    public double getCalfCircumference() {
-        return calfCircumference;
-    }
-
-    public void setCalfCircumference(double calfCircumference) {
-        this.calfCircumference = calfCircumference;
-    }
-
-    public double getChestCircumference() {
-        return chestCircumference;
-    }
-
-    public void setChestCircumference(double chestCircumference) {
-        this.chestCircumference = chestCircumference;
-    }
-
-    private int leanBodyMass;
-    private double waistCircumference;
-    private double neckCircumference;
-    private double hipCircumference;
-    private double forearmCircumference;
-    private double thighCircumference;
-    private double bicepCircumference;
-    private double calfCircumference;
-    private double chestCircumference;
-
-
 
 }
