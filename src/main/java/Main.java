@@ -1,13 +1,10 @@
 import com.twt.business.*;
-import java.util.UUID;
-
-
 
 
 public class Main {
 
     public static void main(String[] args) {
-        BodyParts bp = new BodyParts();
+        BodyPartService bp = new BodyPartService();
         System.out.println(bp.parts);
     }
 
