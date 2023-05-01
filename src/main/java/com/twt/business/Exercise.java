@@ -13,6 +13,9 @@ public class Exercise {
         this.bodyPart = bodyPart;
     }
 
+    public Exercise() {
+        this.id = UUID.randomUUID();
+    }
 
     public UUID getId() {
         return id;
