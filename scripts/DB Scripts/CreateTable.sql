@@ -32,6 +32,6 @@ INSERT INTO twt_objects.bodypart(
 VALUES ('Abs', Now(), 'JT');
 INSERT INTO twt_objects.bodypart(
     name, createdate, createdby)
-VALUES ('Cardio', Now(), 'JT');
+VALUES ('Wrist', Now(), 'JT');
 
 SELECT * FROM twt_objects.bodypart;
