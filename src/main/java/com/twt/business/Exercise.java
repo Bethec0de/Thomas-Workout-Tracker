@@ -5,13 +5,14 @@ import java.util.UUID;
 public class Exercise {
     private UUID id;
     private String name;
-    private BodyParts bodyPart;
+    private BodyPart bodyPart;
 
-    public Exercise(UUID id, String name, BodyParts bodyPart) {
+    public Exercise(UUID id, String name, BodyPart bodyPart) {
         this.id = id;
         this.name = name;
         this.bodyPart = bodyPart;
     }
+
 
     public UUID getId() {
         return id;
@@ -21,7 +22,7 @@ public class Exercise {
         return name;
     }
 
-    public BodyParts getBodyPart() {
+    public BodyPart getBodyPart() {
         return bodyPart;
     }
 
@@ -33,8 +34,8 @@ public class Exercise {
         this.name = name;
     }
 
-    public void setBodyPart(BodyParts bodyParts) {
-        this.bodyPart = bodyParts;
+    public void setBodyPart(BodyPart bodyPart) {
+        this.bodyPart = bodyPart;
     }
 
 

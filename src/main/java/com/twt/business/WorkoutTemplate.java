@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class WorkoutTemplate {
 
     private String name;
-    private ArrayList<BodyParts> bodyParts;
+    private ArrayList<BodyPartService> bodyParts;
     private String[] exercises;
 
-        public WorkoutTemplate(String name, ArrayList<BodyParts> bodyParts, String[] exercises) {
+        public WorkoutTemplate(String name, ArrayList<BodyPartService> bodyParts, String[] exercises) {
         this.name = name;
         this.bodyParts = bodyParts;
         this.exercises = exercises;
@@ -18,7 +18,7 @@ public class WorkoutTemplate {
         return name;
     }
 
-    public ArrayList<BodyParts> getBodyParts() {
+    public ArrayList<BodyPartService> getBodyParts() {
         return bodyParts;
     }
 
@@ -30,7 +30,7 @@ public class WorkoutTemplate {
         this.name = name;
     }
 
-    public void setDescription(ArrayList<BodyParts> bodyParts ) {
+    public void setDescription(ArrayList<BodyPartService> bodyParts ) {
         this.bodyParts = bodyParts;
     }
 

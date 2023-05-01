@@ -16,6 +16,7 @@ public class Workout {
         this.note = note;
     }
 
+
     public void addExerciseSet(ExerciseSet exerciseSet){
         exerciseSets.add(exerciseSet);
     }
