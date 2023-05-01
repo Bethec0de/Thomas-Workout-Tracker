@@ -26,6 +26,10 @@ public class ExerciseSet {
         this.weight = weight;
     }
 
+    public void addExercise(Exercise exercise){
+        this.exercise = exercise;
+    }
+
     public UUID getId() {
         return id;
     }

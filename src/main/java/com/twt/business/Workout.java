@@ -16,6 +16,14 @@ public class Workout {
         this.note = note;
     }
 
+    public void addExerciseSet(ExerciseSet exerciseSet){
+        exerciseSets.add(exerciseSet);
+    }
+
+    public void addExerciseToSet(ExerciseSet set, Exercise exercise){
+        set.addExercise(exercise);
+    }
+
     public UUID getId() {
         return id;
     }
